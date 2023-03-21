@@ -1,24 +1,5 @@
-# README
+A simple short "chat" generator using Chatgpt 3.5. You can publicly ask questions to Chatgpt and get a response back!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+People can comment as well. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The design uses Tailwind CSS.
