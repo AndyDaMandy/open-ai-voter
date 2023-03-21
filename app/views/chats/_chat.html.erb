@@ -1,14 +1,21 @@
 <div id="<%= dom_id chat %>">
+<% if chat.name.nil? %>
+<p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    Anonymous
+  </p>
+<% else %>
 <p class="my-5">
     <strong class="block font-medium mb-1">Name:</strong>
     <%= chat.name %>
   </p>
+<% end %>
   <p class="my-5">
     <strong class="block font-medium mb-1">Message:</strong>
     <%= chat.message %>
   </p>
   <p class="my-5">
-    <strong class="block font-medium mb-1">AI Response</strong>
+    <strong class="block font-medium mb-1">AI Response:</strong>
     <%= chat.response %>
   </p>
   <p class="my-5">

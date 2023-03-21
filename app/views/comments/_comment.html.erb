@@ -1,8 +1,9 @@
 <p>
-    <% if comment.name.nil? == false %>
-   <em><%= comment.name %></em>
+    <% if comment.name.empty? %>
+     <em>Anonymous</em> -  
+   <% else %>
+   <em><%= comment.name %></em> -
     <% end %>
-    -
     <%= comment.content %> |
     <%= comment.created_at.strftime('%c')%>
 </p>
