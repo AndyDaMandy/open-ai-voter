@@ -14,6 +14,14 @@
   <p class="my-5">
   Created on: <%= chat.created_at.strftime("%c") %>
   </p>
+  <p class="my-5">
+  <%= chat.comments.count %>
+    <% if chat.comments.count == 1 %>
+    Comment
+    <% else %>
+    Comments
+    <% end %>
+  </p>
 
   <% if action_name != "show" %>
     <%= link_to "Show this chat", chat, class: "rounded-lg py-3 px-5 bg-gray-100 hover:bg-gray-300 inline-block font-medium" %>
