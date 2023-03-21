@@ -1,5 +1,5 @@
 <div id="<%= dom_id chat %>">
-<% if chat.name.nil? %>
+<% if chat.name.nil? || chat.name.empty? %>
 <p class="my-5">
     <strong class="block font-medium mb-1">Name:</strong>
     Anonymous
