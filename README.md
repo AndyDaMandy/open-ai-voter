@@ -2,4 +2,4 @@ A simple short "chat" generator using Chatgpt 3.5. You can publicly ask question
 
 People can comment as well. 
 
-The design uses Tailwind CSS.
+The frontend uses Tailwind CSS.

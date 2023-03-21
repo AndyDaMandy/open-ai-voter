@@ -16,7 +16,7 @@
   </p>
   <p class="my-5">
     <strong class="block font-medium mb-1">AI Response:</strong>
-    <%= chat.response %>
+    <%= simple_format chat.response %>
   </p>
   <p class="my-5">
   Created on: <%= chat.created_at.strftime("%c") %>
