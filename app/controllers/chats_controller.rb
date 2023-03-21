@@ -4,7 +4,7 @@ class ChatsController < ApplicationController
 
   # GET /chats or /chats.json
   def index
-    @chats = Chat.all
+    @chats = Chat.all.order("created_at DESC").page params[:page]
   end
 
   # GET /chats/1 or /chats/1.json
@@ -69,6 +69,6 @@ class ChatsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def chat_params
-      params.require(:chat).permit(:message, :response)
+      params.require(:chat).permit(:name, :message, :response)
     end
 end

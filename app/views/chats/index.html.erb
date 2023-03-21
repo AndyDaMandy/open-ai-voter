@@ -4,11 +4,14 @@
   <% end %>
 
   <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Chats</h1>
-    <%= link_to 'New chat', new_chat_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <h1 class="font-bold text-4xl">Short Chats Generator using Open AI</h1>
+    <%= link_to 'New chat', new_chat_path, class: "rounded-lg py-3 px-5 bg-blue-600 hover:bg-blue-800 text-white block font-medium" %>
   </div>
 
   <div id="chats" class="min-w-full">
     <%= render @chats %>
+  </div>
+  <div class="min-w-full">
+  <%= paginate @chats %>
   </div>
 </div>

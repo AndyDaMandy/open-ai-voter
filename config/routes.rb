@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :chats
+  resources :chats, except: [:edit, :destroy]
   get 'pages/index'
   get 'pages/test'
   get 'pages/search'

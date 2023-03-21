@@ -1,7 +1,9 @@
 <div class="mx-auto md:w-2/3 w-full">
   <h1 class="font-bold text-4xl">New chat</h1>
+  <p class="my-5">Enter in a prompt, question, or request, and the AI will provide you with a response!</p>
+  <p class="my-5"><strong>Note, the AI can sometimes take a while to load! Please be patient when waiting for your response!</strong></p>
 
   <%= render "form", chat: @chat %>
-
-  <%= link_to 'Back to chats', chats_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  
+  <%= link_to 'Back to chats', chats_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 hover:bg-gray-300 inline-block font-medium" %>
 </div>
