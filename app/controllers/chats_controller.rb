@@ -1,3 +1,4 @@
+
 class ChatsController < ApplicationController
   before_action :set_chat, only: %i[ show edit update destroy ]
 
@@ -22,6 +23,9 @@ class ChatsController < ApplicationController
   # POST /chats or /chats.json
   def create
     @chat = Chat.new(chat_params)
+
+    hash = OpenaiService.new
+    @chat.response = hash.get_chat_response("user", @chat.message)
 
     respond_to do |format|
       if @chat.save
@@ -65,6 +69,6 @@ class ChatsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def chat_params
-      params.require(:chat).permit(:message)
+      params.require(:chat).permit(:message, :response)
     end
 end
